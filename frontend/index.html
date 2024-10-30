@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend</title>
+</head>
+<body>
+    <h1>Welcome to the Frontend!</h1>
+    <p>This is a simple frontend page.</p>
+    <script>
+        async function fetchBackend() {
+            const response = await fetch("http://localhost:3000");
+            const data = await response.json();
+            document.getElementById("backend-data").innerText = JSON.stringify(data);
+        }
+        fetchBackend();
+    </script>
+    <div id="backend-data">Fetching data from backend...</div>
+</body>
+</html>
